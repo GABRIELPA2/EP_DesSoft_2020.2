@@ -67,3 +67,20 @@ sortearb(embaralhar)
 sortearj(embaralhar)
 b=somab(banco)
 j=somaj(jogador)
+###
+# print(f'Antes do elif b= {b} j= {j}')
+if b == j:
+    # print('Empate')
+    ganhador='Empate'
+elif b > 7 or j > 5:
+    # print('Fim de jogo')
+    if b > j:
+        # print('O banco ganhou')
+        ganhador='Banco'
+    elif j > b:
+        # print('O jogador ganhou')
+        ganhador='Jogador'
+else:
+    print('Deve colocar a terceira carta')
+    if j < 5:
+        numero_cartasb=3
