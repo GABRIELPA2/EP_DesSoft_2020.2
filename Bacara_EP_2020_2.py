@@ -150,3 +150,64 @@ else:
     fichas=0
     print('Ok, podemos jogar depois')
 ##########################################################
+while fichas > 0:
+    valor_apostado= int(input('Quantas fichas deseja apostar: '))
+    aposta=''
+    opcao=0
+    while opcao != 3:
+        escolha= int(input("""
+    ======================
+    Escolha uma das opções 
+    ======================\n
+    [1] Apostar no Banco
+    [2] Apostar no Jogador
+    [3] Apostar no Empate
+    Escolha: """))
+        
+        if escolha == 1:
+            aposta=('Banco')
+            print('Carregando......')
+            time.sleep(2)
+            print(f'Ok, suas apostas serão direcionadas ao {aposta} \n')
+            time.sleep(2)
+            print('==========================')
+            print(f'A cartas do banco foram : {banco}')
+            print(f'A soma das cartas do banco foi: {b}')
+            print(f'A cartas do jogador foram : {jogador}')
+            print(f'A soma das jogador do banco foi: {j}')
+            print('========================== \n')
+            if aposta==ganhador:
+                print(f'Vc apostou no {aposta} e ganhou')
+                valor=  math.trunc(valor_apostado*0.95)
+                fichas= fichas + valor
+                print(f'Vc ganhou {valor} fichas, agr vc tem {fichas} fichas')
+                comisao= fichas*0.00106 ####Commisao
+                fichas= fichas - comisao
+            else:
+                print(f'Vc apostou no {aposta} e deu {ganhador}, vc perdeu!')
+                fichas= fichas - valor_apostado
+                print(f'Vc perdeu {valor_apostado} fichas, agr vc tem {fichas} fichas')
+            break
+        
+        elif escolha == 2:
+            aposta=('Jogador')
+            print('Carregando......')
+            time.sleep(2)
+            print(f'Ok, suas apostas serão direcionadas ao {aposta} \n')
+            time.sleep(2)
+            print('==========================')
+            print(f'A cartas do banco foram : {banco}')
+            print(f'A soma das cartas do banco foi: {b}')
+            print(f'A cartas do jogador foram : {jogador}')
+            print(f'A soma das jogador do banco foi: {j}')
+            print('========================== \n')
+            if aposta==ganhador:
+                print(f'Vc apostou no {aposta} e ganhou')
+                fichas= fichas + valor_apostado
+                comisao= fichas*0.00124 ####Commisao
+                fichas= fichas - comisao
+            else:
+                print(f'Vc apostou no {aposta} e deu {ganhador}, vc perdeu!')
+                fichas= fichas - valor_apostado
+                print(f'Vc perdeu {valor_apostado} fichas, agr vc tem {fichas} fichas')
+            break
