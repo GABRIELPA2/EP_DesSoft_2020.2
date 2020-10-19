@@ -28,3 +28,24 @@ def sortearj(cartas):
     # print(cartas)
     # print(len(cartas))
     # print(f'A lista do jogador é {jogador}')
+def somab(listab):
+    somabanco=0
+    for valor in listab: # para cada valor na lista
+        somabanco+=valor # soma as duas cartas 
+    if somabanco > 9:
+        somabanco= somabanco-10
+    # print('-----------------------------')
+    # print(f'A soma do banco é {somabanco}')
+    # print('-----------------------------')
+    return somabanco
+
+def somaj(listaj):
+    somajogador=0
+    for valor in listaj: # para cada valor na lista
+        somajogador+=valor # soma as duas cartas 
+    if somajogador > 9:
+        somajogador= somajogador-10
+    # print('-----------------------------')
+    # print(f'A soma do jogador é {somajogador}')
+    # print('-----------------------------')
+    return somajogador
