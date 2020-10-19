@@ -49,3 +49,21 @@ def somaj(listaj):
     # print(f'A soma do jogador é {somajogador}')
     # print('-----------------------------')
     return somajogador
+
+numero_cartasb=2
+numero_cartasj=2
+ganhador=''
+A= 1
+J= 0
+Q= 0
+K= 0
+baralho= [A,2,3,4,5,6,7,8,9,10,J,Q,K]*4
+baralho[9]= 0
+banco=[]
+jogador=[]
+embaralhar=baralho[:] #Criou uma copia da lista baralho
+embaralhar_cartas(embaralhar)
+sortearb(embaralhar)
+sortearj(embaralhar)
+b=somab(banco)
+j=somaj(jogador)
