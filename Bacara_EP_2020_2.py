@@ -84,3 +84,69 @@ else:
     print('Deve colocar a terceira carta')
     if j < 5:
         numero_cartasb=3
+print('-'*30)
+print('Jogo Bacara')
+print('-'*30)
+print('')
+play= str(input('Vamos começar?[S/N] ')).upper()
+
+if play[0] != 'N':
+#############Comprar Fichas###################
+    fichas=0
+    escolha= 0
+    a=0
+    while escolha != 6:
+        time.sleep(1)
+        escolha= int(input("""
+    ======================
+    Escolha uma das opções 
+    ======================\n
+    [1] 100 Fichas (R$ 200)
+    [2] 200 Fichas (R$ 400)
+    [3] 300 Fichas (R$ 600)
+    [4] 400 Fichas (R$ 800)
+    [5] 500 Fichas (R$ 1000)
+    [6] Não quero mais jogar
+    Escolha: """))
+        if escolha == 1:
+            fichas= 100
+            print('')
+            print('Fichas compradas com sucesso, bom jogo!')
+            print(f'    ===Nota Fiscal=== \n Compra______ {fichas} fichas \n Valor______ 200 reais')
+            break
+        elif escolha == 2:
+            fichas= 200
+            print('')
+            print('Fichas compradas com sucesso, bom jogo!')
+            print(f'    ===Nota Fiscal=== \n Compra______ {fichas} fichas \n Valor______ 400 reais')
+            break
+        elif escolha == 3:
+            fichas= 300
+            print('')
+            print('Fichas compradas com sucesso, bom jogo!')
+            print(f'    ===Nota Fiscal=== \n Compra______ {fichas} fichas \n Valor______ 600 reais')
+            break
+        elif escolha == 4:
+            fichas= 400
+            print('')
+            print('Fichas compradas com sucesso, bom jogo!')
+            print(f'    ===Nota Fiscal=== \n Compra______ {fichas} fichas \n Valor______ 800 reais')
+            break
+        elif escolha == 5:
+            fichas= 500
+            print('')
+            print('Fichas compradas com sucesso, bom jogo!')
+            print(f'    ===Nota Fiscal=== \n Compra______ {fichas} fichas \n Valor______ 1000 reais')
+            break
+        elif escolha == 6:
+            a= 1
+            print('')
+            print('Tchau!')
+            break
+        else:
+            print("Valor invalido tente novamenete")
+else:
+    a=1
+    fichas=0
+    print('Ok, podemos jogar depois')
+##########################################################
