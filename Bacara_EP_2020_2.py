@@ -211,3 +211,50 @@ while fichas > 0:
                 fichas= fichas - valor_apostado
                 print(f'Vc perdeu {valor_apostado} fichas, agr vc tem {fichas} fichas')
             break
+        
+        elif escolha == 3:
+            aposta=('Empate')
+            print('Carregando......')
+            time.sleep(2)
+            print(f'Ok, suas apostas serão direcionadas ao {aposta} \n')
+            time.sleep(2)
+            print('==========================')
+            print(f'A cartas do banco foram : {banco}')
+            print(f'A soma das cartas do banco foi: {b}')
+            print(f'A cartas do jogador foram : {jogador}')
+            print(f'A soma das jogador do banco foi: {j}')
+            print('========================== \n')
+            if aposta==ganhador:
+                print(f'Vc apostou no {aposta} e ganhou')
+                valor= valor_apostado*8
+                fichas= fichas + valor
+                comisao= fichas*1.44 ####Commisao
+                fichas= fichas - comisao
+                print(f'Vc ganhou {valor} fichas, agr vc tem {fichas} fichas')
+                
+            else:
+                print(f'Vc apostou no {aposta} e deu {ganhador}, vc perdeu!')
+                fichas= fichas - valor_apostado
+                print(f'Vc perdeu {valor_apostado} fichas, agr vc tem {fichas} fichas')
+            break
+        else:
+            print('Valor invalido, vamos tentar novamete')
+    if fichas == 0:
+        print('====================')
+        print('Vc perdeu tudo!!!')
+        print('Sorte no amor e azar no jogo? Ou azar nos dois?')
+        print('Mais sorte da proxima vez! Tchau!')
+        print('====================')
+        break
+    else:
+        jog= input('Deseja continuar jogando? ').upper()
+        if jog[0] == 'N':
+            print('====================')
+            print('Obrigado por jogar!')
+            print('====================')
+            print('')
+            print(f'Voçê terminou com {fichas} fichas')
+            print(f'Voçê ficou com R$ {fichas*2} reais')
+            break
+        else:
+            print('Vamos continuar')
